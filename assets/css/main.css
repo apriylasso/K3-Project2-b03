@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --color-primary: #0D6EFD;
+    --color-secondary: #333333;
+    --color-red: #FF2E2E;
+    --color-gray: #C4C4C4; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
