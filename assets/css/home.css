@@ -3,6 +3,8 @@ body {
   flex-direction: column;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  background-color: var(--color-background);
+
 }
 
 header {
@@ -14,6 +16,7 @@ header {
   height: 120px;
   position: fixed;
   z-index: 999;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07);
 }
 
 .header-top {
@@ -79,7 +82,7 @@ header {
   height: 90%;
   width: 10%;
   padding: 0 5px;
-  margin-right: 3px;
+  margin-right: 1px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -110,14 +113,14 @@ header {
 
 /* ------------------------------------------------------- BODY ------------------------------------------------------- */
 
-.container {
+.wrapper {
+  position: relative;
   display: flex;
   margin-top: 120px;
   flex-direction: column;
   gap: 30px;
   padding: 10px 10%;
-  background-color: var(--color-background);
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 }
 
@@ -133,6 +136,7 @@ header {
 .slider-container {
   display: flex;
   transition: transform 0.5s ease;
+  height: 100px;
 }
 
 .slider-item {
@@ -313,15 +317,26 @@ header {
   padding-left: 7px;
 }
 
-.swiper {
+.swiper, .product-container {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  height: 450px;
+}
+
+.product-container {
+  flex-wrap: wrap;
+  margin-bottom: 400px;
 }
 
 .card {
   flex: 0 0 calc(100% / 3);
   padding: 20px 30px;
+  height: 450px;
+}
+
+.card-product {
+  flex: 0 0 calc(100% / 4);
+  height: 450px;
+  padding: 30px 5px;
 }
 
 @media (max-width: 768px) {
@@ -337,7 +352,7 @@ header {
   height: 100%;
   background-color: var(--color-gray);
   border-radius: 20px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px 0px;
 }
 
 .content .label {
@@ -405,12 +420,67 @@ header {
   fill: gray;
 }
 
+.page {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.page button {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page button:hover {
+  background-color: var(--color-blue);
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 0;
+}
+
+.h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.contact-footer {
+  display: flex;
+  gap: 40px;
+  height: 60px;
+}
+
 /* ------------------------------------------------------- RESPONSIVE ------------------------------------------------- */
 
 
 @media (max-width: 785px) {
   .slider {
-    height: 250px;
+    min-height: 200px;
+  }
+  .page {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
   }
 }
 
@@ -429,7 +499,7 @@ header {
   }
 
   .slider {
-    height: 133px;
+    min-height: 133px;
   }
 
   .slider-prev,
