@@ -52,3 +52,46 @@ sliderDots.forEach((dot, index) => {
 });
 
 startAutoSlide();
+const swiperPrev = document.querySelector(".prev");
+const swiperNext = document.querySelector(".next");
+const swiper = document.querySelector('.swiper');
+const cards = document.querySelectorAll('.card');
+
+let currentsIndex = 0;
+const cardWidth = cards[0].offsetWidth;
+const cardMargin = parseInt(getComputedStyle(cards[0]).marginRight);
+
+function showCard(index) {
+  const position = -(cardWidth + cardMargin) * index;
+  swiper.style.transform = `translateX(${position}px)`;
+}
+
+function swipeNext() {
+  currentsIndex = (currentsIndex + 1) % cards.length;
+  showCard(currentsIndex);
+}
+
+function swipePrev() {
+  currentsIndex = (currentsIndex - 1 + cards.length) % cards.length;
+  showCard(currentsIndex);
+}
+
+swiperPrev.addEventListener("click", () => {
+    swipePrev();
+});
+
+swiperNext.addEventListener("click", () => {
+    swipeNext();
+});
+
+// document.querySelector('.swiper-container').addEventListener('click', (event) => {
+//   if (event.target.classList.contains('prev')) {
+//     console.log('prev');
+//     swipePrev();
+//   } else if (event.target.classList.contains('next')) {
+//     swipeNext();
+//   }
+// });
+
+// Tampilkan kartu pertama saat halaman dimuat
+showCard(currentsIndex);

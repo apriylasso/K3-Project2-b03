@@ -1,252 +1,516 @@
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-background);
+
 }
 
 header {
-    background-color: var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    padding: 15px 50px;
-    width: 100%;
-    height: 120px;
-    position: fixed;
-    z-index: 999;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 50px;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07);
 }
 
 .header-top {
-    height: 25px;
-    width: 100%;
+  height: 25px;
+  width: 100%;
 }
 
 .header-top a {
-    color: white;
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid white;
+  color: white;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid white;
 }
 
 .header-top a:hover {
-    color: var(--color-gray);
+  color: var(--color-gray);
 }
 
 .header-bottom {
-    display: flex;
-    justify-content: space-between;
-    display: flex;
-    margin-top: 15px;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 15px;
+  color: white;
 }
 
 .header-bottom div {
-    display: inline-flex;
-    align-items: center;
-    /* margin-right: 10px; */
+  display: inline-flex;
+  align-items: center;
+  /* margin-right: 10px; */
 }
 
 .mr-10 {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .logo a {
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-    margin-right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 30px;
 }
 
 .search-bar {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    width: 70%;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 70%;
+  border-radius: 5px;
 }
 
 .search-bar input {
-    width: 90%;
-    padding: 5px 20px;
-    outline: none;
-    border: none;
+  width: 90%;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
 }
 
 .search-bar div {
-    display: flex;
-    justify-content: center;
-    background-color: var(--color-primary);
-    height: 90%;
-    width: 10%;
-    padding: 0 5px;
-    margin-right: 3px;
-    border-radius: 5px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  height: 90%;
+  width: 10%;
+  padding: 0 5px;
+  margin-right: 1px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .search-bar div:hover {
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .header-right {
-    display: flex;
+  display: flex;
 }
 
 .header-right div {
-    border: 3px solid white;
-    padding: 5px 20px;
-    height: 100%;
-    margin-right: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  border: 3px solid white;
+  padding: 5px 20px;
+  height: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .header-right div:hover {
-    background-color: white;
-    color: var(--color-primary);
+  background-color: white;
+  color: var(--color-primary);
 }
 
 /* ------------------------------------------------------- BODY ------------------------------------------------------- */
 
-.container {
-    display: flex;
-    margin-top: 120px;
-    padding: 10px 50px;
-    background-color: var(--color-background);
-    height: 100%;
-    width: 100%;
+.wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 120px;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px 10%;
+  /* height: 100%; */
+  width: 100%;
 }
 
+/* ------------------------------------------------------- SLIDER ----------------------------------------------------- */
+
 .slider {
-    position: relative;
-    overflow: hidden;
-    height: 500px;
-    border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  border-radius: 20px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100px;
+}
+
+.slider-item {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.slider-item img {
+  width: 100%;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.9375) 100%);
+}
+
+.nav-left,
+.nav-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left {
+  left: 0;
+}
+
+.nav-right {
+  right: 0;
+}
+
+.slider-prev,
+.slider-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(255, 250, 250, 0.45);
+  color: var(--color-secondary);
+  font-size: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.slider-prev {
+  padding-left: 7px;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  opacity: 0.7;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-dot {
+  border: 2px solid white;
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 20px 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #fff;
+}
+
+/* ------------------------------------------------------- SECTION DISCOUNT  ----------------------------------------- */
+
+.section-discount {
+  width: 100%;
+  height: auto;
+}
+
+.section-discount .head {
+  display: flex;
+  padding: 10px 5px;
+  gap: 10px;
+}
+
+.section-discount .title {
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.section-discount .label {
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.section-discount .accent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.section-discount .accent span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gray);
+  border-radius: 4px;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0px 45px;
+}
+
+.swiper-left,
+.swiper-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-left {
+  left: 0;
+}
+
+.swiper-right {
+  right: 0;
+}
+
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.prev {
+  padding-left: 7px;
+}
+
+.swiper, .product-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-container {
+  flex-wrap: wrap;
+  margin-bottom: 400px;
+}
+
+.card {
+  flex: 0 0 calc(100% / 3);
+  padding: 20px 30px;
+  height: 450px;
+}
+
+.card-product {
+  flex: 0 0 calc(100% / 4);
+  height: 450px;
+  padding: 30px 5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
   }
-  
-  .slider-container {
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-gray);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px 0px;
+}
+
+.content .label {
+  position: absolute;
+  top: 20px;
+  left: -6px;
+}
+
+.content-image {
+  background-size: 100%;
+  height: 65%;
+  border-radius: 20px 20px 0 0;
+}
+
+.content-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 25px;
+  background-color: white;
+  height: 35%;
+  border-radius: 0 0 20px 20px;
+  gap: 10px;
+}
+
+.product-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.product-price {
+  font-size: 15px;
+  color: var(--color-secondary);
+}
+
+.product-action {
+  display: flex;
+  height: 35px;
+}
+
+.product-action button {
+  width: 60%;
+  background-color: var(--color-blue);
+  border: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-action button:hover {
+  background-color: var(--color-primary);
+}
+
+.product-action svg {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.product-action svg path {
+  cursor: pointer;
+}
+
+.product-action svg path:hover {
+  fill: gray;
+}
+
+.page {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.page button {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page button:hover {
+  background-color: var(--color-blue);
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 0;
+}
+
+.h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.contact-footer {
+  display: flex;
+  gap: 40px;
+  height: 60px;
+}
+
+/* ------------------------------------------------------- RESPONSIVE ------------------------------------------------- */
+
+
+@media (max-width: 785px) {
+  .slider {
+    min-height: 200px;
+  }
+  .page {
     display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slider-item {
-    flex-shrink: 0;
     width: 100%;
-  }
-
-  .slider-item img {
-    width: 100%;
-  }
-  
-  .slider-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0.9375) 100%);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 15px 20px;
+    height: 110px;
   }
 
-  .nav-left, .nav-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .logo a {
+    display: none;
   }
 
-  .nav-left {
-    left: 0;
+  .search-bar div {
+    display: none;
   }
 
-  .nav-right {
-    right: 0;
+  .slider {
+    min-height: 133px;
   }
-  
+
   .slider-prev,
   .slider-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background: rgba(255, 250, 250, 0.45);
-    color: var(--color-secondary);
-    font-size: 30px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    color: rgba(255, 250, 250, 0.45);
   }
 
-  .slider-prev {
-    padding-left: 7px;
+  .container {
+    padding: 10px 20px;
   }
-  
-  .slider-prev:hover,
-  .slider-next:hover {
-    opacity: 0.7;
-  }
-  
-  .slider-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slider-dot {
-    border: 2px solid white;
-    background-color: transparent;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 20px 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .slider-dot.active {
-    background-color: #fff;
-  }
-
-  @media (max-width: 785px) {
-        .slider {
-            height: 250px;
-        }
-    }
-  @media (max-width: 500px) {
-    header {
-        padding: 15px 20px;
-        height: 110px;
-    }
-
-    .logo a {
-        display: none;
-    }
-
-    .search-bar div {
-        display: none;
-    }
-
-    .slider {
-        height: 133px;
-    }
-
-    .slider-prev,
-    .slider-next {
-        height: 20px;
-        width: 20px;
-        background: transparent;
-        color: rgba(255, 250, 250, 0.45);
-    }
-    .container {
-        padding: 10px 20px;
-    }
 }
