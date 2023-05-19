@@ -1,0 +1,262 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+}
+
+/* ------------------------------------------------------------- navbar ------------------------------------------------------------- */
+
+header {
+    display: block;
+    position: fixed;
+    width: 100%;
+}
+
+.header-1 {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    /* padding: 15px 50px; */
+    width: 100%;
+    height: 60px;
+    /* position: fixed; */
+    /* z-index: 999;  */
+}
+
+.top-header {
+    display: flex;
+    height: 30px;
+    margin: 15px 70px;
+    justify-content: space-between;
+}
+
+.top-header .nav a {
+    color: white;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+    font-size: 22px;
+}
+
+.top-header .nav a:hover {
+    color: rgb(40, 39, 39);
+}
+
+.top-header .user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header .user .user-profile {
+    margin-right: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.top-header .user .user-profile:hover {
+    color: rgb(40, 39, 39);
+}
+
+.top-header .user .logo-user .logo {
+    display: flex;
+    justify-content: center;
+    width: 35px;
+    margin-top: -5px;
+}
+
+.header-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.botton-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px;
+}
+
+.botton-header .title a {
+    color: var(--color-primary);
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid var(--color-primary);
+    font-size: 22px;
+}
+
+.botton-header .title .shop {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.botton-header .title .whislist {
+    font-size: 34px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    border: 1px solid var(--color-primary);
+    border-radius: 7px;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 90%;
+    font-size: 22px;
+}
+
+.search-bar div {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    width: 90px;
+    height: 42px;
+    margin: 6px 9px;
+    padding-top: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.search-bar div img {
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+/* ------------------------------------------------------------- Container Body ------------------------------------------------------------- */
+
+.container {
+    /* display: flex;
+    justify-content: space-between; */
+    margin-top: 200px;
+    padding: 10px 60px;
+    /* background-color: aqua; */
+}
+
+.container .whislist-slide .whislist-2 {
+    display: flex;
+    font-size: 46px;
+}
+
+/* .container .whislist-slide .slider {
+    display: flex;
+    top: -100px;
+    left: 30px;
+    width: 10px;
+    margin-right: 5px;
+    height: 10px;
+    border-radius: 50px;
+    border: 0;
+    background-color: var(--color-gray);
+} */
+
+.container .whislist-slide .slider {
+    display: flex;
+}
+
+.container .whislist-slide .slider .dot-slider {
+    display: flex;
+    justify-content: center;
+    margin-top: -32px;
+    width: 10px;
+    margin-left: 230px;
+    margin-right: -260px;
+    height: 10px;
+    border-radius: 50px;
+    border: 0;
+    background-color: var(--color-gray);
+    cursor: pointer;
+}
+
+.container .c-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.container .c-card .card {
+    background-color: var(--color-gray);
+    width: 300px;
+    height: 370px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .c-card .card .items-card {
+    background-color: white;
+    height: 160px;
+    margin-top: 210px;
+    border-radius: 20px;
+    padding: 18px 38px;
+}
+
+.container .c-card .card .items-card .items-1 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.container .c-card .card .items-card .btn-buy {
+    background-color: #5097FF;
+    color: white;
+    margin-top: 10px;
+    width: 170px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.container .c-card .card .items-card .btn-buy:hover {
+    background-color: #294f86;
+    color: white;
+    width: 170px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+}
+
+.container .c-card .card .items-card .logo-love {
+    
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--color-primary);
+    margin-top: 70px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+footer .shop-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+}
+footer .logo-footer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+}
+
+footer .logo-footer img{
+    width: 40px;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
