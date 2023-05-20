@@ -1,0 +1,128 @@
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+}
+
+.container{
+    display: flex;
+    align-content:center;
+
+    width: 1013px;
+    height: 652px;
+
+    transform: translate(-50%, -50%);
+    
+}
+
+.reg{
+    margin-left: -50px;
+    width: 542px;
+    height: 652px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 4, 45, 0.15);
+    border-radius: 17px;
+    }
+
+.img{
+width: 50%;
+height: 645px;
+left: 177px;
+top: 121px;
+
+background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+.reg form{
+    margin-left: 37px;
+    margin-top: 22px;
+}
+
+.input-field{
+    margin-bottom: 20px;
+}
+
+.reg h1{
+width: 90px;
+height: 38px;
+margin-top: 51px;
+margin-left: 37px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+/* identical to box height */
+
+
+color: #0D6EFD;
+}
+
+.reg p{
+width: 73px;
+height: 19px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #0D6EFD;
+}
+
+.reg input {
+box-sizing: border-box;
+width: 467px;
+height: 60px;
+
+border: 2px solid #C4C4C4;
+border-radius: 7px;
+}
+
+.login, input[type=text], input[type=password], input[type=email]{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+text-align: center;
+line-height: 28px;
+
+color: #C4C4C4;
+}
+
+.checkbox input{
+box-sizing: border-box;
+width: 23px;
+height: 23px;
+
+border: 1px solid #C4C4C4;
+border-radius: 3px;
+}
+
+.reg button{
+margin-top: 17px;
+width: 467px;
+height: 60px;
+color: #FFFFFF;
+font-family: 'Roboto';
+font-style: normal;
+font-size: 24px;
+
+background: #0D6EFD;
+border-radius: 7px;
+}
+
+.login{
+    position: absolute;
+    top: 700px;
+    left: 350px; 
+    color: #333333;
+   
+    
+}
