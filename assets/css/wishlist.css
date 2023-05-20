@@ -179,28 +179,37 @@ header {
     font-weight: 700;
 }
 
-.container .c-card .card .items-card .btn-buy {
-    background-color: #5097FF;
-    color: white;
+.product-action {
+    display: flex;
+    height: 35px;
     margin-top: 10px;
-    width: 170px;
-    height: 45px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
 }
-
-.container .c-card .card .items-card .btn-buy:hover {
-    background-color: #294f86;
+  
+.product-action button {
+    width: 80%;
+    background-color: var(--color-blue);
+    border: transparent;
     color: white;
-    width: 170px;
-    height: 45px;
-    border: none;
-    border-radius: 7px;
-}
-
-.container .c-card .card .items-card .logo-love {
+    border-radius: 5px;
     cursor: pointer;
+}
+  
+.product-action button:hover {
+    background-color: var(--color-primary);
+}
+  
+.product-action svg {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+  
+.product-action svg path {
+    cursor: pointer;
+}
+  
+.product-action svg path:hover {
+    fill: gray;
 }
 
 footer {
