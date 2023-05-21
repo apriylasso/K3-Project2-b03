@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 1226px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--color-background);
 }
@@ -155,14 +155,13 @@ input[type=text],[type=email],[type=number],[type=datetime-local] {
     margin-top: 70px;
 }
   .profile{
-    position: absolute;
     width: 600px;
     right: 230px;
-    top: 400px;
+    margin-left: 550px;
+    margin-top: -150px;
   }
 
   .pict {
-    position: absolute;
     width: 220px;
     height: 220px;
     top: 300px;
@@ -176,10 +175,9 @@ input[type=text],[type=email],[type=number],[type=datetime-local] {
   }
 
   .user{
-    position: absolute;
     text-align: center;
-    top: 550px;
-    left: 400px;
+    margin-left: -900px;
+   
   }
   
   .col-25 {
@@ -212,4 +210,38 @@ input[type=text],[type=email],[type=number],[type=datetime-local] {
     
     background: #0D6EFD;
     border-radius: 7px;
+    }
+
+    footer {
+        background-color: var(--color-primary);
+        margin-top: 70px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    
+    footer .shop-footer {
+        display: flex;
+        justify-content: center;
+        font-size: 46px;
+        font-weight: 700;
+        color: white;
+    }
+    footer .logo-footer {
+        display: flex;
+        justify-content: center;
+        margin: 20px 20px;
+    }
+    
+    footer .logo-footer img{
+        width: 40px;
+        align-items: center;
+        margin: 10px 20px;
+    }
+    
+    footer .copyright {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 400;
     }
