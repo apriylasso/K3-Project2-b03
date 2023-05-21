@@ -1,0 +1,10 @@
+.pict {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+  }
