@@ -18,11 +18,8 @@ header {
     background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
-    /* padding: 15px 50px; */
     width: 100%;
     height: 60px;
-    /* position: fixed; */
-    /* z-index: 999;  */
 }
 
 .top-header {
@@ -125,37 +122,17 @@ header {
     cursor: pointer;
 }
 
-.search-bar div img {
-    /* display: flex;
-    justify-content: space-around; */
-}
-
 /* ------------------------------------------------------------- Container Body ------------------------------------------------------------- */
 
 .container {
-    /* display: flex;
-    justify-content: space-between; */
     margin-top: 200px;
     padding: 10px 60px;
-    /* background-color: aqua; */
 }
 
 .container .whislist-slide .whislist-2 {
     display: flex;
     font-size: 46px;
 }
-
-/* .container .whislist-slide .slider {
-    display: flex;
-    top: -100px;
-    left: 30px;
-    width: 10px;
-    margin-right: 5px;
-    height: 10px;
-    border-radius: 50px;
-    border: 0;
-    background-color: var(--color-gray);
-} */
 
 .container .whislist-slide .slider {
     display: flex;
@@ -202,29 +179,37 @@ header {
     font-weight: 700;
 }
 
-.container .c-card .card .items-card .btn-buy {
-    background-color: #5097FF;
-    color: white;
+.product-action {
+    display: flex;
+    height: 35px;
     margin-top: 10px;
-    width: 170px;
-    height: 45px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
 }
-
-.container .c-card .card .items-card .btn-buy:hover {
-    background-color: #294f86;
+  
+.product-action button {
+    width: 80%;
+    background-color: var(--color-blue);
+    border: transparent;
     color: white;
-    width: 170px;
-    height: 45px;
-    border: none;
-    border-radius: 7px;
-}
-
-.container .c-card .card .items-card .logo-love {
-    
+    border-radius: 5px;
     cursor: pointer;
+}
+  
+.product-action button:hover {
+    background-color: var(--color-primary);
+}
+  
+.product-action svg {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+  
+.product-action svg path {
+    cursor: pointer;
+}
+  
+.product-action svg path:hover {
+    fill: gray;
 }
 
 footer {
