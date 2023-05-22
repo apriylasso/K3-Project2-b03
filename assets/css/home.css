@@ -98,10 +98,11 @@ header {
 }
 
 .header-right div {
+  position: relative;
   border: 3px solid white;
   padding: 5px 20px;
   height: 100%;
-  margin-right: 10px;
+  margin-right: 10%;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -109,6 +110,34 @@ header {
 .header-right div:hover {
   background-color: white;
   color: var(--color-primary);
+}
+
+.shopping_cart .label {
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: red;
+  height: 17px;
+  width: 17px;
+  border-radius: 10px;
+}
+
+.header-right .user-loged {
+  padding: 0px;
+  border: none;
+}
+
+.header-right .user-loged:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.header-right .user-loged span {
+  font-size: 40px;
 }
 
 /* ------------------------------------------------------- BODY ------------------------------------------------------- */
@@ -519,6 +548,14 @@ header {
 }
 
 @media (max-width: 785px) {
+  .prev,
+  .next {
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    color: rgba(255, 250, 250, 0.45);
+  }
+
   .slider {
     min-height: 200px;
   }
@@ -567,7 +604,7 @@ header {
 
   .card-product {
     flex: 0 0 calc(50% - 10px);
-    height: 270px;
+    height: 250px;
     padding: 10px 3px;
   }
 
@@ -589,7 +626,7 @@ header {
     font-size: 10px;
   }
   .images {
-    height: 50%;
+    height: 70%;
   }
   /* .contents {
     height: 97%;
