@@ -10,29 +10,111 @@
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <div class="vertical"></div>
-            <li><a href="">Discount</a></li>
-            <div class="vertical"></div>
-            <li><a href="wishlist.html">Category</a></li>
-        </ul>
-        <div class="user">User</div>
-        <a class="logo-user" href="#"><img src="../assets/img/user.png" alt=""></a>
-    </nav>
-
-    <div class="c-shop">
-        <div class="shop"><b>Shop</b></div>
-        <div class="vertical2"></div>
-        <div class="whislist">Whislish</div>
-        <div class="search-box">
-            <input type="text" placeholder="search whislist ...">
-            <button><img src="../assets/img/search.png" alt=""></button>
+    <header>
+        <div class="header-1">
+            <div class="top-header">
+                <div class="nav">
+                    <a href="home.html">Home</a>
+                    <a href="#">Discount</a>
+                    <a href="#" style="border: none;">Category</a>
+                </div>
+                <div class="user">
+                    <a class="user-profile" href="profile.html">User</a>
+                    <a class="logo-user" href="#"><img class="logo" src="../assets/img/user.png" alt=""></a>
+                </div>
+            </div>
         </div>
-        <div></div>
-        <div></div>
+        <div class="header-2">
+            <div class="botton-header">
+                <div class="title">
+                    <a class="shop" href="#">Shop</a>
+                    <a class="chart" href="wishlist.html" style="border: none;">Chart</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="search whislist ...">
+                    <div><a href=""><img src="../assets/img/search.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="text">
+            <h1>Profile Saya</h1>
+            <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
+        </div>
+        <div class="pict">
+          <img src="https://pbs.twimg.com/media/Eo6vnl5U0AATo4J.jpg" alt="empty">
+          <p>Name</p>
+          <p>Email@gmail.com</p>
+        </div>
+        <div class="user">
+          <p>Name</p>
+            <p>Email@gmail.com</p>
+        </div>
+        <div class="profile">
+            <form action="/action_page.php">
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Nama</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Nama">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="nomor">Nomor Telepon</label>
+                </div>
+                <div class="col-75">
+                  <input type="number" id="nomor" name="nomor-telepon" placeholder="Nomot Telepon">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                  <input type="email" id="email" name="lastname" placeholder="Email">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="toko">Nama Toko</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="toko" name="nama-toko" placeholder="Nama Toko">
+                </div>
+              </div>
+              <div>
+                <input type="radio" class="radio-button" name="gender" value="Laki-Laki">
+                <label for="Laki-Laki">Laki-Laki</label>
+                <input type="radio" class="radio-button" name="gender" value="Perempuan">
+                <label for="Perempuan">Perempuan</label>
+           </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="ttl">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="datetime-local" id="ttl" class="form-input"">
+                </div>
+              </div>
+
+              <button>Simpan</button>
+            </form>
+        </div>
     </div>
+    <footer>
+      <div class="shop-footer">Shop</div>
+      <div class="logo-footer">
+          <a href="#"><img src="../assets/img/icon-fb.png" alt=""></a>
+          <a href="#"><img src="../assets/img/icon-ig.png" alt=""></a>
+          <a href="#"><img src="../assets/img/icon-wa.png" alt=""></a>
+      </div>
+      <div class="copyright">&copyCopyright 2023 Genbox Kelompok 3</div>
+  </footer>
+    
     
 </body>
 </html>
