@@ -84,14 +84,4 @@ swiperNext.addEventListener("click", () => {
     swipeNext();
 });
 
-// document.querySelector('.swiper-container').addEventListener('click', (event) => {
-//   if (event.target.classList.contains('prev')) {
-//     console.log('prev');
-//     swipePrev();
-//   } else if (event.target.classList.contains('next')) {
-//     swipeNext();
-//   }
-// });
-
-// Tampilkan kartu pertama saat halaman dimuat
 showCard(currentsIndex);
